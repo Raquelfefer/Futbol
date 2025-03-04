@@ -1,11 +1,15 @@
 package equipo.jugadores;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Jugador {
 
 	private int idJugador;
 	private String nombre;
 	private int dorsal;
 	private String equipo;
+	private static List<Jugador> jugadores = new ArrayList<>();
 	
 	private static int ultimoJugador = 1;
 	
@@ -14,7 +18,28 @@ public abstract class Jugador {
 		setNombre(nombre);
 		setDorsal(dorsal);
 		setEquipo(equipo);
+		jugadores.add(this);
 	}
+	
+	
+	public static List<Jugador> getJugadores() {
+		return jugadores;
+	}
+
+	public static Jugador getJugadorPorId(int id) {
+		Jugador devolver = null;
+		for(Jugador j : jugadores) {
+			if(j.getIdJugador() == id) {
+				devolver = j;
+			}		
+		}
+		if(devolver == null) {
+			throw new IllegalArgumentException("Jugador no encontrado.");
+		}else {
+			return devolver;
+		}
+	}
+	
 	public int getIdJugador() {
 		return this.idJugador;
 	}

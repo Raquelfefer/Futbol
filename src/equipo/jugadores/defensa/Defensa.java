@@ -6,8 +6,8 @@ public abstract class Defensa extends Jugador{
 
 	private int disputasRealizadas;
 
-	public Defensa(String nombre, int dorsal, String equipo, int disputasRealizadas) {
-		super(nombre, dorsal, equipo);
+	public Defensa(String nombre, int dorsal, String equipo, int posicion, int disputasRealizadas) {
+		super(nombre, dorsal, equipo, posicion);
 		setDisputasRealizadas(disputasRealizadas);
 	}
 	

@@ -9,15 +9,17 @@ public abstract class Jugador {
 	private String nombre;
 	private int dorsal;
 	private String equipo;
+	private int posicion;
 	private static List<Jugador> jugadores = new ArrayList<>();
 	
 	private static int ultimoJugador = 1;
 	
-	public Jugador(String nombre, int dorsal, String equipo) {
+	public Jugador(String nombre, int dorsal, String equipo, int posicion) {
 		this.idJugador = ultimoJugador++;
 		setNombre(nombre);
 		setDorsal(dorsal);
 		setEquipo(equipo);
+		setPosicion(posicion);
 		jugadores.add(this);
 	}
 	
@@ -56,6 +58,10 @@ public abstract class Jugador {
 		return this.equipo;
 	}
 	
+	public int getPosicion() {
+		return this.posicion;
+	}
+	
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -66,6 +72,10 @@ public abstract class Jugador {
 	
 	public void setEquipo(String equipo) {
 		this.equipo = equipo;
+	}
+	
+	public void setPosicion(int posicion) {
+		this.posicion = posicion;
 	}
 	
 	public abstract void mostrarDatos();

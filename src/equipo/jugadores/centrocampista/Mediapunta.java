@@ -1,4 +1,4 @@
-package equipo.jugadores.Centrocampista;
+package equipo.jugadores.centrocampista;
 
 public class Mediapunta extends CentroCampista{
 	

@@ -15,7 +15,6 @@ public abstract class Jugador {
 		setDorsal(dorsal);
 		setEquipo(equipo);
 	}
-	
 	public int getIdJugador() {
 		return this.idJugador;
 	}
@@ -46,11 +45,12 @@ public abstract class Jugador {
 	
 	public abstract void mostrarDatos();
 
+	
 	@Override
 	public String toString() {
-		return "Jugador [nombre=" + nombre + ", dorsal=" + dorsal + ", equipo=" + equipo + "]";
+		return "Jugador [idJugador=" + idJugador + ", nombre=" + nombre + ", dorsal=" + dorsal + ", equipo=" + equipo
+				+ "]";
 	}
-	
 	@Override
 	public boolean equals(Object otro) {
 		Jugador otroJugador = (Jugador) otro;

@@ -6,8 +6,8 @@ public abstract class Delantero extends Jugador{
 
 	private int goles;
 
-	public Delantero(String nombre, int dorsal, String equipo, int goles) {
-		super(nombre, dorsal, equipo);
+	public Delantero(String nombre, int dorsal, String equipo, int posicion, int goles) {
+		super(nombre, dorsal, equipo, posicion);
 		setGoles(goles);
 	}
 
@@ -24,7 +24,7 @@ public abstract class Delantero extends Jugador{
 
 	@Override
 	public String toString() {
-		return "Delantero [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo" + getEquipo() + ", goles=" + this.goles + "]";
+		return "Delantero [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo" + getEquipo() + ", posicion=" + getPosicion() + ", goles=" + this.goles + "]";
 	}
 	
 

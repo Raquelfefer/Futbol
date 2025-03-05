@@ -83,8 +83,8 @@ public abstract class Jugador {
 	
 	@Override
 	public String toString() {
-		return "Jugador [idJugador=" + idJugador + ", nombre=" + nombre + ", dorsal=" + dorsal + ", equipo=" + equipo
-				+ "]";
+		return "Jugador [idJugador=" + this.idJugador + ", nombre=" + this.nombre + ", dorsal=" + this.dorsal + ", equipo=" + this.equipo
+				+ ", posición=" + this.posicion + "]";
 	}
 	@Override
 	public boolean equals(Object otro) {

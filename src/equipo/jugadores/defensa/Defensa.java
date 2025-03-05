@@ -24,7 +24,7 @@ public abstract class Defensa extends Jugador{
 
 	@Override
 	public String toString() {
-		return "Defensa [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo" + getEquipo() + ", disputas realizadas=" + this.disputasRealizadas + "]";
+		return "Defensa [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo" + getEquipo() + ", posición=" + getPosicion() + ", disputas realizadas=" + this.disputasRealizadas + "]";
 	}
 	
 	

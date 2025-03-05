@@ -6,8 +6,8 @@ public class Lateral extends Defensa{
 
 	private Puesto puesto;
 
-	public Lateral(String nombre, int dorsal, String equipo, int disputasRealizadas, String puesto) {
-		super(nombre, dorsal, equipo, disputasRealizadas);
+	public Lateral(String nombre, int dorsal, String equipo, int posicion, int disputasRealizadas, String puesto) {
+		super(nombre, dorsal, equipo, posicion, disputasRealizadas);
 		setPuesto(puesto);
 	}
 
@@ -26,7 +26,7 @@ public class Lateral extends Defensa{
 
 	@Override
 	public String toString() {
-		return "Defensa [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo" + getEquipo() + ", disputas realizadas=" + getDisputasRealizadas() + ", puesto=" + this.puesto + "]";
+		return "Defensa [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo" + getEquipo() + ", posición=" + getPosicion() + ", disputas realizadas=" + getDisputasRealizadas() + ", puesto=" + this.puesto + "]";
 	}
 	
 	

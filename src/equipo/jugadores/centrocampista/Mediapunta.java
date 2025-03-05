@@ -5,7 +5,7 @@ public class Mediapunta extends CentroCampista{
 	private int asistencias;
 
 	public Mediapunta(String nombre, int dorsal, String equipo, int pasesCompletos, int asistencias) {
-		super(nombre, dorsal, equipo, pasesCompletos);
+		super(nombre, dorsal, equipo, pasesCompletos, 7);
 		setAsistencias(asistencias);
 	}
 	
@@ -24,7 +24,7 @@ public class Mediapunta extends CentroCampista{
 	
 	@Override
 	public String toString() {
-		return "Mediapunta [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo=" + getEquipo() + ", pases completos=" + getPasesCompletos() + ", asistencias=" + this.asistencias +  "]";
+		return "Mediapunta [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo=" + getEquipo() + ", posición=" + getPosicion() + ", pases completos=" + getPasesCompletos() + ", asistencias=" + this.asistencias +  "]";
 	}
 	
 	

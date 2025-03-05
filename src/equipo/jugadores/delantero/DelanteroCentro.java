@@ -5,7 +5,7 @@ public class DelanteroCentro extends Delantero{
 	private int golesDePenalti;
 
 	public DelanteroCentro(String nombre, int dorsal, String equipo, int goles, int golesDePenalti) {
-		super(nombre, dorsal, equipo, goles);
+		super(nombre, dorsal, equipo, 10 ,goles);
 		setGolesDePenalti(golesDePenalti);
 	}
 
@@ -24,6 +24,6 @@ public class DelanteroCentro extends Delantero{
 
 	@Override
 	public String toString() {
-		return "Delantero Centro [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo" + getEquipo() + ", goles=" + getGoles() + ", goles de penalti=" + this.golesDePenalti + "]";
+		return "Delantero Centro [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo" + getEquipo() + ", posición=" + getPosicion() +  ", goles=" + getGoles() + ", goles de penalti=" + this.golesDePenalti + "]";
 	}
 }

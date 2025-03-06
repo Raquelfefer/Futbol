@@ -6,8 +6,8 @@ public class Portero extends Jugador{
 
 	private int paradas;
 
-	public Portero(String nombre, int dorsal, String equipo, int posicion, int paradas) {
-		super(nombre, dorsal, equipo, posicion);
+	public Portero(String nombre, int dorsal, String equipo, int paradas) {
+		super(nombre, dorsal, equipo, 0);
 		setParadas(paradas);
 	}
 	

@@ -50,25 +50,31 @@ public class Main {
 					switch(opcion1) {
 					case 1:
 						Portero p = nuevoPortero(s);
-	
+						nuevoEquipoPorJugador(p.getEquipo());
 						break;
 					case 2:
 						Lateral l = nuevoLateral(s);
+						nuevoEquipoPorJugador(l.getEquipo());
 						break;
 					case 3:
 						Central c = nuevoCentral(s);
+						nuevoEquipoPorJugador(c.getEquipo());
 						break;
 					case 4:
 						Pivote pi = nuevoPivote(s);
+						nuevoEquipoPorJugador(pi.getEquipo());
 						break;
 					case 5:
 						Mediapunta m = nuevoMediapunta(s);
+						nuevoEquipoPorJugador(m.getEquipo());
 						break;
 					case 6:
 						Extremo e = nuevoExtremo(s);
+						nuevoEquipoPorJugador(e.getEquipo());
 						break;
 					case 7:
 						DelanteroCentro d = nuevoDelanteroCentro(s);
+						nuevoEquipoPorJugador(d.getEquipo());
 						break;
 					}
 					break;
@@ -90,7 +96,7 @@ public class Main {
 				case 6:
 					Equipo eq4 =  Equipo.getEquipoPorId(seleccionarEquipo(s));
 					for(Jugador j : eq4.getEquipo()) {
-						System.out.println(j.toString());
+						j.mostrarDatos();
 					}
 					break;
 				default:
@@ -114,7 +120,7 @@ public class Main {
 		String nombreEquipo = s.next();
 		System.out.println("Paradas: ");
 		int paradas = s.nextInt();
-		return new Portero(nombre, dorsal, nombreEquipo, 0, paradas);	
+		return new Portero(nombre, dorsal, nombreEquipo, paradas);	
 	}
 	
 	public static Lateral nuevoLateral(Scanner s) {
@@ -246,11 +252,22 @@ public class Main {
 		return jugadorSeleccionado;
 	}
 	
-	public static boolean addJugadorEnMenu(Scanner s) {
-		System.out.println("¿Quieres añadir el jugador a la alineación de su equipo (true/false)?");
-		boolean add = s.nextBoolean();
+	public static void nuevoEquipoPorJugador(String nombreEquipo) {
+		boolean noEsta = true;
+		for(Equipo e : Equipo.getEquipos()) {
+			if(e.getNombreEquipo().equals(nombreEquipo)) {
+				noEsta = false;
+			}
+		}
+		if(noEsta) {
+			new Equipo(nombreEquipo);
+			System.out.println("Se ha creado el equipo de tu nuevo jugador.");
+		}else {
+			System.out.println("El equipo ya está creado.");
+		}
 		
 	}
+	
 }
 
 

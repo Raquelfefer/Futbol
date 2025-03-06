@@ -26,7 +26,7 @@ public class Lateral extends Defensa{
 
 	@Override
 	public String toString() {
-		return "Defensa [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo" + getEquipo() + ", posición=" + getPosicion() + ", disputas realizadas=" + getDisputasRealizadas() + ", puesto=" + this.puesto + "]";
+		return "Defensa [idJugador= " + getIdJugador() + ", nombre= " + getNombre() + ", dorsal= " + getDorsal() + ", equipo= " + getEquipo() + ", posición= " + getPosicion() + ", disputas realizadas= " + getDisputasRealizadas() + ", puesto= " + this.puesto + "]";
 	}
 	
 	

@@ -1,11 +1,11 @@
-package equipo.jugadores.centrocampista;
+package equipo.jugadores.centroCampista;
 
 public class Mediapunta extends CentroCampista{
 	
 	private int asistencias;
 
-	public Mediapunta(String nombre, int dorsal, String equipo, int pasesCompletos, int asistencias) {
-		super(nombre, dorsal, equipo, pasesCompletos, 7);
+	public Mediapunta(String nombre, int dorsal, String equipo, int posicion, int pasesCompletos, int asistencias) {
+		super(nombre, dorsal, equipo, posicion, pasesCompletos);
 		setAsistencias(asistencias);
 	}
 	

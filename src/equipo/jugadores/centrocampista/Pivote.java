@@ -1,4 +1,4 @@
-package equipo.jugadores.centrocampista;
+package equipo.jugadores.centroCampista;
 
 public class Pivote extends CentroCampista{
 

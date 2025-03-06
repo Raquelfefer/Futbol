@@ -4,8 +4,8 @@ public class DelanteroCentro extends Delantero{
 
 	private int golesDePenalti;
 
-	public DelanteroCentro(String nombre, int dorsal, String equipo, int goles, int golesDePenalti) {
-		super(nombre, dorsal, equipo, 10 ,goles);
+	public DelanteroCentro(String nombre, int dorsal, String equipo, int posicion, int goles, int golesDePenalti) {
+		super(nombre, dorsal, equipo, posicion ,goles);
 		setGolesDePenalti(golesDePenalti);
 	}
 

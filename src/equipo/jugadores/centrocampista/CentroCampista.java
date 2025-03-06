@@ -1,4 +1,4 @@
-package equipo.jugadores.centrocampista;
+package equipo.jugadores.centroCampista;
 
 import equipo.jugadores.Jugador;
 

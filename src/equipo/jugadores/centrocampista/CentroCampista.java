@@ -7,7 +7,7 @@ public abstract class CentroCampista extends Jugador{
 	
 	private int pasesCompletos;
 	
-	public CentroCampista(String nombre, int dorsal, String equipo, int pasesCompletos, int posicion) {
+	public CentroCampista(String nombre, int dorsal, String equipo, int posicion, int pasesCompletos) {
 		super(nombre, dorsal, equipo, posicion);
 		setPasesCompletos(pasesCompletos);
 	}
@@ -25,7 +25,7 @@ public abstract class CentroCampista extends Jugador{
 
 	@Override
 	public String toString() {
-		return "Centro campista [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo" + getEquipo() + ", posición=" + getPosicion() + ", pases completos=" + this.pasesCompletos + "]";
+		return "Centro campista [idJugador= " + getIdJugador() + ", nombre= " + getNombre() + ", dorsal= " + getDorsal() + ", equipo= " + getEquipo() + ", posición= " + getPosicion() + ", pases completos= " + this.pasesCompletos + "]";
 	}
 	
 	

@@ -12,7 +12,7 @@ public class Equipo {
 	private String nombreEquipo;
 	
 	private static List<Equipo> equipos= new ArrayList<>();
-	private static int UltimoIdEquipo = 0;
+	private static int UltimoIdEquipo = 1;
 	
 	public Equipo(String nombreEquipo) {
 		setNombreEquipo(nombreEquipo);

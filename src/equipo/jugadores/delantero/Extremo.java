@@ -26,7 +26,7 @@ public class Extremo extends Delantero{
 
 	@Override
 	public String toString() {
-		return "Extremo [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo" + getEquipo() + ", posición=" + getPosicion() + ", goles=" + getGoles() + ", puesto=" + this.puesto + "]";
+		return "Extremo [idJugador= " + getIdJugador() + ", nombre= " + getNombre() + ", dorsal= " + getDorsal() + ", equipo= " + getEquipo() + ", posición= " + getPosicion() + ", goles= " + getGoles() + ", puesto= " + this.puesto + "]";
 	}
 		
 	

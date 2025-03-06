@@ -6,8 +6,8 @@ public class Portero extends Jugador{
 
 	private int paradas;
 
-	public Portero(String nombre, int dorsal, String equipo, int paradas) {
-		super(nombre, dorsal, equipo, 0);
+	public Portero(String nombre, int dorsal, String equipo, int posicion, int paradas) {
+		super(nombre, dorsal, equipo, posicion);
 		setParadas(paradas);
 	}
 	
@@ -26,7 +26,7 @@ public class Portero extends Jugador{
 
 	@Override
 	public String toString() {
-		return "Portero [idJugador=" + getIdJugador() + ", nombre" + getNombre() + ", dorsal=" + getDorsal() + ", equipo=" + getEquipo() + ", posición=" + getPosicion() + ", paradas=" + this.paradas + "]";
+		return "Portero [idJugador= " + getIdJugador() + ", nombre= " + getNombre() + ", dorsal= " + getDorsal() + ", equipo= " + getEquipo() + ", posición= " + getPosicion() + ", paradas= " + this.paradas + "]";
 	}
 	
 	

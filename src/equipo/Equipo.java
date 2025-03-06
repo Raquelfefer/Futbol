@@ -1,6 +1,7 @@
 package equipo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import equipo.jugadores.Jugador;
@@ -56,6 +57,26 @@ public class Equipo {
 	public static List<Equipo> getEquipos() {
 		return equipos;
 	}
+	
+	
+	@Override
+	public String toString() {
+		return "Equipo [idEquipo=" + this.idEquipo + ", equipo=" + Arrays.toString(equipo) + ", nombreEquipo=" + this.nombreEquipo
+				+ "]";
+	}
+	
+	@Override
+	public boolean equals(Object otro) {
+		Equipo otroEquipo = (Equipo) otro;
+		boolean iguales;
+		if(this.idEquipo == otroEquipo.idEquipo) {
+			iguales = true;
+		}else {
+			iguales = false;
+		}
+		return iguales;
+	}
+
 
 	public void addJugador(int  idJugador) {
 		Jugador j = Jugador.getJugadorPorId(idJugador);

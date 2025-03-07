@@ -57,7 +57,9 @@ public class Main {
 					+ "4. Mostrar alineación de un equipo \n"
 					+ "5. Mostrar información de un jugador \n"
 					+ "6. Mostrar información de una alineación \n"
-					+ "7. Salir del menú");
+					+ "7. Mostrar jugadores creados \n"
+					+ "8. Mostrar equipos creados \n"
+					+ "9. Salir del menú");
 			System.out.println("Introduce una opción:");
 			opcion = s.nextInt();
 			
@@ -132,15 +134,21 @@ public class Main {
 						j.mostrarDatos();
 					}
 					break;
+				case 7:
+					mostrarJugadoresCreados();
+					break;
+				case 8:
+					mostrarEquiposCreados();
+					break;
 				default:
-					if(opcion != 7) {
+					if(opcion != 9) {
 						System.out.println("Introduce una opción válida.");
 					}else {
 						System.out.println("Has salido del menú.");
 					}
 					break;
 			}
-		}while(opcion != 7);
+		}while(opcion != 9);
 		
 	}
 	
@@ -267,11 +275,23 @@ public class Main {
 		return new Equipo(nombreEquipo);
 	}
 	
-	public static int seleccionarEquipo(Scanner s) {
-		System.out.println("¿Qué equipo quieres seleccionar?");
+	public static void mostrarJugadoresCreados() {
+		System.out.println("Jugadores: ");
+		for(Jugador j : Jugador.getJugadores()) {
+			System.out.println(j.getIdJugador() + " " + j.getNombre());
+		}
+	}
+	
+	public static void mostrarEquiposCreados() {
+		System.out.println("Equipos: ");
 		for(Equipo e : Equipo.getEquipos()) {
 			System.out.println(" - " + e.getIdEquipo() + " " + e.getNombreEquipo());
 		}
+	}
+	
+	public static int seleccionarEquipo(Scanner s) {
+		System.out.println("¿Qué equipo quieres seleccionar?");
+		mostrarEquiposCreados();
 		int equipoSeleccionado = s.nextInt();
 		return equipoSeleccionado;
 	}
@@ -279,9 +299,7 @@ public class Main {
 
 	public static int seleccionarJugador(Scanner s) {
 		System.out.println("¿Qué jugador quieres seleccionar?");
-		for(Jugador j : Jugador.getJugadores()) {
-			System.out.println(j.getIdJugador() + " " + j.getNombre());
-		}
+		mostrarJugadoresCreados();
 		int jugadorSeleccionado = s.nextInt();
 		return jugadorSeleccionado;
 	}
